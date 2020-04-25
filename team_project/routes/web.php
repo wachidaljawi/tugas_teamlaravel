@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/thr', 'data\thrController@thr')->name('thr');
-Route::get('/tunjangan', 'data\tunjanganController@tampilan')->name('thr');
+Route::get('/thr', 'data\tunjanganController@tampilan')->name('thr');
 

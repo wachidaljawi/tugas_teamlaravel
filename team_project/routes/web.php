@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/thr', 'data\thrController@thr')->name('thr');
-Route::get('/thr', 'data\tunjanganController@tampilan')->name('thr');
+// Route::get('/thr', 'data\thrController@thr')->name('thr');
+// Route::get('/thr', 'data\tunjanganController@tampilan')->name('thr');
 
+Route::prefix('admin')->group(function () {
+    Route::get('/thr', 'data\thrController@thr');
+    Route::get('/tunjangan', 'data\tunjanganController@tampilan');
+
+});

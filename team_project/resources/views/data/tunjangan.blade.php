@@ -1,6 +1,6 @@
 @extends('layout.master')
 @section('title', 'Data Jumlah Pembagian THR')
-@section ('menuThr','active')
+@section ('menuTunjangan','active')
 @section('content')
 
     <div class="card-body">
@@ -15,7 +15,7 @@
           </tr>
         </thead>
         <tbody>
-          @foreach($karyawan as $tampil)
+          @foreach($pegawai as $tampil)
           <tr>
             @for($i=0; $i<count($tampil); $i++)
               @if($tampil[$i]<2)

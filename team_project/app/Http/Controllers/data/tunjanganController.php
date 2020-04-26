@@ -16,6 +16,7 @@ class tunjanganController extends Controller
             ['Indah', 'Admin Logistik', 4200000, 3],
             ['Endang', 'Admin Payroll', 5000000, 5]
         ];
-        return view('karyawan.thr')->with('pegawai' . $pegawai);
+        // dd($pegawai);
+        return view('data.tunjangan')->with('pegawai', $pegawai);
     }
 }

@@ -9,7 +9,7 @@ class thrController extends Controller
 {
     public function thr()
     {
-        $karyawan = collect([
+        $karyawan1 = collect([
             ['Andi', 'Admin', 4200000, 2],
             ['Albert', 'Marketing', 4200000, 3],
             ['Ujang', 'Office boy', 3800000, 3],
@@ -21,10 +21,19 @@ class thrController extends Controller
             ['Kiki', 'Acounting', 5000000, 2],
             ['Giman', 'CTO', 9000000, 10]
         ]);
-        
+
+        $pegawai = [
+            "pegawai1" => ['Jubaedah', 'Receptionist', 4200000, 2],
+            "pegawai2" => ['Sukirman', 'Security', 4200000, 3],
+            "pegawai3" => ['Bejo', 'Full Stack Developer', 7000000, 4],
+            "pegawai4" => ['Indah', 'Admin Logistik', 4200000, 3],
+            "pegawai5" => ['Endang', 'Admin Payroll', 5000000, 5]
+        ];
         // $karyawan = $karyawan->combine($pegawai);
         // dd($karyawan);
-        return view('data.thr')->with('karyawan', $karyawan);
-       
+        // return view('data.thr')->with('karyawan', $karyawan);
+        $karyawan = $karyawan1->all() + $pegawai;
+        return view('data.thr', compact('karyawan'), compact('karyawan'))->with("karyawan1", $karyawan1);
+
     }
 }

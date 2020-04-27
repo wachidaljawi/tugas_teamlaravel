@@ -4,8 +4,8 @@
 @section('content')
 
     <div class="card-body">
-      <table class="table table-bordered">
-        <thead>
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark"
           <tr>
             <th scope="col">Nama</th>
             <th scope="col">Bagian</th>
